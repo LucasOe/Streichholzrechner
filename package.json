@@ -1,0 +1,16 @@
+{
+  "name": "streichholzrechner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^5.0.0",
+    "electron-packager": "^13.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Lucas Oelker",
+  "license": "ISC"
+}
