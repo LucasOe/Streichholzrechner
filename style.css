@@ -1,0 +1,27 @@
+#tableBody {
+	color: white;
+	display: table;
+	border-collapse: collapse;
+}
+
+tr, td {
+	border: 1px solid white;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#tableHeader {
+	height: 50px;
+}
+
+#speicherzelle {
+	width: 100px;
+}
+
+#inhalt {
+	width: 100px;
+}
+
+#bedeutung {
+	width: 300px;
+}
