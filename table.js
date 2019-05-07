@@ -3,53 +3,44 @@ function createTable() {
   var table = document.createElement('TABLE');
 
   var tableBody = document.createElement('TBODY');
-	tableBody.id = 'tableBody';
+	tableBody.className = 'tableBody';
   table.appendChild(tableBody);
 
-	var tr = document.createElement('TR');
-	tableBody.appendChild(tr);
-
-	//Speicherzelle Header
-	var speicherzelle_header = document.createElement('TD');
-	speicherzelle_header.appendChild(document.createTextNode("Speicherzelle"));
-	speicherzelle_header.id = 'tableHeader'
-	tr.appendChild(speicherzelle_header);
-
-	//Inhalt Header
-	var inhalt_header = document.createElement('TD');
-	inhalt_header.appendChild(document.createTextNode("Inhalt"));
-	inhalt_header.id = 'tableHeader'
-	tr.appendChild(inhalt_header);
-
-	//Bedeutung Header
-	var bedeutung_header = document.createElement('TD');
-	bedeutung_header.appendChild(document.createTextNode("Bedeutung"));
-	bedeutung_header.id = 'tableHeader'
-	tr.appendChild(bedeutung_header);
-
 	//Row
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 20; i++) {
     var tr = document.createElement('TR');
+		tr.className = 'tr';
+		tr.id = i;
     tableBody.appendChild(tr);
 
 		//Column Speicherzelle
     var td = document.createElement('TD');
-    td.appendChild(document.createTextNode("Speicherzelle " + i));
-		td.id = 'speicherzelle';
+    td.appendChild(document.createTextNode(i));
+		td.className = 'speicherzelle';
     tr.appendChild(td);
 
 		//Column Inhalt
 		var td = document.createElement('TD');
-		td.appendChild(document.createTextNode("Inhalt " + i));
-		td.id = 'inhalt';
+		td.appendChild(document.createTextNode("0"); //Add user input here, select by clicking row.
+		td.className = 'inhalt';
 		tr.appendChild(td);
 
 		//Column Bedeutung
 		var td = document.createElement('TD');
-		td.appendChild(document.createTextNode("Bedeutung " + i));
-		td.id = 'bedeutung';
+		td.appendChild(document.createTextNode("0"));
+		td.className = 'bedeutung';
 		tr.appendChild(td);
   }
   tableDiv.appendChild(table);
 }
 createTable();
+
+var btns = tableBody.getElementsByClassName("tr");
+
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}

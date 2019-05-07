@@ -2,8 +2,9 @@ const {app, BrowserWindow} = require('electron')
 
 app.on('ready', function createWindow () {
 	let mainWindow = new BrowserWindow({
-		width: 800,
-		height: 500,
+		//Window Settings
+		width: 500,
+		height: 800,
 		title: app.getName(),
 		titleBarStyle: 'hidden',
 		backgroundColor: '#23272A',

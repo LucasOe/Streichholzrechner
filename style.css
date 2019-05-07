@@ -1,27 +1,22 @@
-#tableBody {
+.tableBody {
 	color: white;
 	display: table;
 	border-collapse: collapse;
+	font-family: 'Open Sans', sans-serif;
 }
 
-tr, td {
-	border: 1px solid white;
-	text-align: center;
-	vertical-align: middle;
+.tableHeader {
+	font-weight: bold;
 }
 
-#tableHeader {
-	height: 50px;
+.speicherzelle {
+	width: 130px;
 }
 
-#speicherzelle {
-	width: 100px;
+.inhalt {
+	width: 130px;
 }
 
-#inhalt {
-	width: 100px;
-}
+.bedeutung {
 
-#bedeutung {
-	width: 300px;
 }
