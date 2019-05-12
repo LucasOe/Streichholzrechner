@@ -48,7 +48,10 @@ createTable();
 var allInputs = document.querySelectorAll('input');
 
 allInputs.forEach(function(button, buttonIndex) {
-  button.addEventListener('click', function() {
+  button.addEventListener('click', handler, false);
+	button.addEventListener('change', handler, false);
+
+	function handler(event) {
 		var input = document.getElementById("input" + buttonIndex).value;
 		var bedeutung = document.getElementById("bedeutung" + buttonIndex);
 		//bedeutung.textContent = input;
@@ -80,5 +83,5 @@ allInputs.forEach(function(button, buttonIndex) {
 			default:
 				bedeutung.textContent = input;
 		}
-  });
+  }
 });
