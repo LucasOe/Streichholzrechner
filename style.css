@@ -18,10 +18,6 @@
 	width: 130px;
 }
 
-.bedeutung {
-
-}
-
 table {
 	width: 100%;
 }
@@ -29,4 +25,14 @@ table {
 .tr:hover {
 	width: 100%;
 	background-color: #32373b;
+}
+
+.userInput {
+	width: 100px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
 }

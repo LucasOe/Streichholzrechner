@@ -21,7 +21,12 @@ function createTable() {
 
 		//Column Inhalt
 		var td = document.createElement('td');
-		td.appendChild(document.createTextNode("0")); //Add user input here, select by clicking row.
+		var input = document.createElement("input")
+			input.setAttribute("type", "number");
+			input.setAttribute("min", "0");
+			input.setAttribute("placeholder", "0");
+			input.className = 'userInput';
+		td.appendChild(input); //Add user input here, select by clicking row.
 		td.className = 'inhalt';
 		tr.appendChild(td);
 
