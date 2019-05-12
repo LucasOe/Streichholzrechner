@@ -3,6 +3,7 @@
 	display: table;
 	border-collapse: collapse;
 	font-family: 'Open Sans', sans-serif;
+	width: 100%;
 }
 
 .tableHeader {
@@ -19,4 +20,13 @@
 
 .bedeutung {
 
+}
+
+table {
+	width: 100%;
+}
+
+.tr:hover {
+	width: 100%;
+	background-color: #32373b;
 }
