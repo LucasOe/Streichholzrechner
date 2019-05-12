@@ -51,6 +51,34 @@ allInputs.forEach(function(button, buttonIndex) {
   button.addEventListener('click', function() {
 		var input = document.getElementById("input" + buttonIndex).value;
 		var bedeutung = document.getElementById("bedeutung" + buttonIndex);
-		bedeutung.textContent = input;
+		//bedeutung.textContent = input;
+		switch(input) {
+			case "0":
+				bedeutung.textContent = "Jmpg";
+				break;
+			case "1":
+				bedeutung.textContent = "Jmp";
+				break;
+			case "2":
+				bedeutung.textContent = "Ld x";
+				break;
+			case "3":
+				bedeutung.textContent = "Ld y";
+				break;
+			case "4":
+				bedeutung.textContent = "Add";
+				break;
+			case "5":
+				bedeutung.textContent = "Sub";
+				break;
+			case "6":
+				bedeutung.textContent = "Str X";
+				break;
+			case "7":
+				bedeutung.textContent = "Ld f";
+				break;
+			default:
+				bedeutung.textContent = input;
+		}
   });
 });
