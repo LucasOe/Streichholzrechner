@@ -1,5 +1,4 @@
 const {app, BrowserWindow} = require('electron');
-var path = require('path');
 
 app.on('ready', function createWindow () {
 	let mainWindow = new BrowserWindow({
