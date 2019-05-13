@@ -56,28 +56,28 @@ allInputs.forEach(function(button, buttonIndex) {
 		var bedeutung = document.getElementById("bedeutung" + buttonIndex);
 		//bedeutung.textContent = input;
 		switch(input) {
-			case "0":
+			case "1":
 				bedeutung.textContent = "Jmpg";
 				break;
-			case "1":
+			case "2":
 				bedeutung.textContent = "Jmp";
 				break;
-			case "2":
+			case "3":
 				bedeutung.textContent = "Ld x";
 				break;
-			case "3":
+			case "4":
 				bedeutung.textContent = "Ld y";
 				break;
-			case "4":
+			case "5":
 				bedeutung.textContent = "Add";
 				break;
-			case "5":
+			case "6":
 				bedeutung.textContent = "Sub";
 				break;
-			case "6":
+			case "7":
 				bedeutung.textContent = "Str X";
 				break;
-			case "7":
+			case "8":
 				bedeutung.textContent = "Ld f";
 				break;
 			default:
