@@ -1,17 +1,18 @@
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow} = require('electron');
+var path = require('path');
 
 app.on('ready', function createWindow () {
 	let mainWindow = new BrowserWindow({
 		//Window Settings
-		width: 500,
-		height: 800,
+		width: 422,
+		height: 750,
 		title: app.getName(),
 		titleBarStyle: 'hidden',
 		backgroundColor: '#23272A',
 		resizable: false
 	});
 	mainWindow.setMenuBarVisibility(false);
-	mainWindow.loadFile('index.html');
+	mainWindow.loadFile('./app/index.html');
 
 	mainWindow.on('closed', () => {
 		mainWindow = null;

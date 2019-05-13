@@ -18,6 +18,10 @@
 	width: 130px;
 }
 
+.bedeutung {
+	width: 130px;
+}
+
 table {
 	width: 100%;
 }
@@ -28,7 +32,7 @@ table {
 }
 
 .userInput {
-	width: 100px;
+	width: 120px;
 	background-color: transparent;
 	border: none;
 	outline: none;
