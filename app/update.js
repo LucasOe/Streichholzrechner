@@ -88,7 +88,3 @@ function updateBedeutung(index) {
 		}
 	}
 }
-
-function test() {
-	console.log("Test");
-}
