@@ -14,8 +14,8 @@ for(var i=0; i < rows; i++) {
 
 //Setzt isVar zu true wenn der vorherige befehl ld x/y ist und es sich somit in der folgenden Zeile um eine Variable handelt
 function updateIsVar() {
-	inputArray.forEach(function(value, i) {
-	  switch(value) {
+	inputArray.forEach(function(input, i) {
+	  switch(input) {
 			case "3": //Ld x
 				if(!isVarArray[i]) isVarArray[i+1] = true;
 				break;
