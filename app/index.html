@@ -23,13 +23,12 @@
 			</table>
 		</div>
 		<script>
-			//Rendert die Tabelle
 			var tableBody = document.getElementById('tbody');
 			var rows = 20; //Anzahl der Zeilen die gerendert werden
 			for (var i = 0; i < rows; i++) {
 				var tr = document.createElement('tr');
 				tr.className = 'tr';
-				tr.id = i;
+				tr.id = "tr" + i;
 				tableBody.appendChild(tr);
 
 				//Column Speicherzelle
@@ -45,7 +44,7 @@
 					input.setAttribute("min", "0");
 					input.setAttribute("defaultValue", "0");
 					input.setAttribute("placeholder", "0");
-					input.id = 'input' + i;
+					input.id = i;
 					input.className = 'userInput';
 				td.appendChild(input);
 				td.className = 'inhalt';
@@ -54,11 +53,12 @@
 				//Column Bedeutung
 				var td = document.createElement('td');
 				td.appendChild(document.createTextNode("0"));
-				td.id = "bedeutung" + i;
+				td.id = "b" + i;
 				td.className = 'bedeutung';
 				tr.appendChild(td);
 			}
 		</script>
+		<script src="./process.js"></script>
 		<script src="./update.js" charset="utf-8"></script>
 	</body>
 </html>

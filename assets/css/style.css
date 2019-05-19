@@ -41,3 +41,7 @@ table {
 	font-size: 16px;
 	cursor: default;
 }
+
+.var {
+	background-color: #282C2F;
+}

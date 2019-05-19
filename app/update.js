@@ -1,4 +1,7 @@
-//Updated die Bedeutung bei änderung des Inhalts
+/*
+	Updatet die die Tabelle bedingt durch den Inhalt
+*/
+
 var allInputs = document.querySelectorAll('input');
 
 allInputs.forEach(function(button, buttonIndex) {
@@ -6,9 +9,15 @@ allInputs.forEach(function(button, buttonIndex) {
 	button.addEventListener('change', handler, false);
 
 	function handler(event) {
-		var input = document.getElementById("input" + buttonIndex).value;
-		var bedeutung = document.getElementById("bedeutung" + buttonIndex);
-		//bedeutung.textContent = input;
+		var input = document.getElementById(buttonIndex).value;
+		var bedeutung = document.getElementById("b" + buttonIndex);
+		var tr = document.querySelectorAll('tr');
+
+		//Add input to array
+		inputArray[button.id] = input;
+		updateIsVar();
+
+		//Update Bedeutung
 		switch(input) {
 			case "1":
 				bedeutung.textContent = "Jmpg";
@@ -50,5 +59,15 @@ allInputs.forEach(function(button, buttonIndex) {
 				bedeutung.textContent = input;
 				bedeutung.removeAttribute("title");
 		}
+
+		//Setzt die Klasse von tr zu var wenn der vorherige Befehl Ld x/y ist.
+		tr.forEach(function(tr, trIndex) {
+			var test = document.getElementById("tr" + trIndex);
+			if(isVarArray[trIndex] === true) {
+				test.classList.add("var");
+			} else {
+				test.classList.remove("var");
+			}
+		});
   }
 });
