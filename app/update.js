@@ -5,10 +5,10 @@
 var allInputs = document.querySelectorAll('input');
 
 allInputs.forEach(function(button, buttonIndex) {
-  button.addEventListener('click', handler, false);
-	button.addEventListener('change', handler, false);
+  button.addEventListener('click', handler);
+	button.addEventListener('change', handler);
 
-	function handler(event) {
+	function handler() {
 		var input = document.getElementById(buttonIndex).value;
 		var bedeutung = document.getElementById("b" + buttonIndex);
 		var tr = document.querySelectorAll('tr');
@@ -17,6 +17,10 @@ allInputs.forEach(function(button, buttonIndex) {
 		inputArray[button.id] = input;
 		updateIsVar();
 
+		if(isVarArray[buttonIndex]) {
+			bedeutung.textContent = input;
+			bedeutung.removeAttribute("title");
+		} else {
 		//Update Bedeutung
 		switch(input) {
 			case "1":
@@ -58,7 +62,7 @@ allInputs.forEach(function(button, buttonIndex) {
 			default:
 				bedeutung.textContent = input;
 				bedeutung.removeAttribute("title");
-		}
+		}}
 
 		//Setzt die Klasse von tr zu var wenn der vorherige Befehl Ld x/y ist.
 		tr.forEach(function(tr, trIndex) {
