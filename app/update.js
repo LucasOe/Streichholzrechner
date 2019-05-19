@@ -1,5 +1,5 @@
 /*
-	Updatet die die Tabelle bedingt durch den Inhalt
+	Updatet die die Tabelle
 */
 
 //Druchläuft alle buttons und fügt Event Listeners hinzu
@@ -20,7 +20,6 @@ allInputs.forEach(function(button, buttonIndex) {
 		updateClass();
 		updateBedeutung(buttonIndex);
   }
-
 });
 
 function updateClass() {
@@ -88,4 +87,8 @@ function updateBedeutung(index) {
 				bedeutung.removeAttribute("title");
 		}
 	}
+}
+
+function test() {
+	console.log("Test");
 }

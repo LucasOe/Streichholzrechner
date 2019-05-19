@@ -17,14 +17,20 @@ function updateIsVar() {
 	inputArray.forEach(function(input, i) {
 	  switch(input) {
 			case "3": //Ld x
-				if(!isVarArray[i]) isVarArray[i+1] = true;
-				break;
+				if(!isVarArray[i]) {
+					isVarArray[i+1] = true;
+					break;
+				}
 			case "4": //Ld y
-				if(!isVarArray[i]) isVarArray[i+1] = true;
-				break;
+				if(!isVarArray[i]) {
+					isVarArray[i+1] = true;
+					break;
+				}
 			default:
 				isVarArray[i+1] = false;
 				break;
 		}
+
+		console.log(isVarArray);
 	});
 }
