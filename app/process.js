@@ -30,7 +30,5 @@ function updateIsVar() {
 				isVarArray[i+1] = false;
 				break;
 		}
-
-		console.log(isVarArray);
 	});
 }
