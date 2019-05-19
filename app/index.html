@@ -17,8 +17,49 @@
 			</table>
 		</div>
 		<hr>
-		<div id="tableDiv">	</div>
-		<div id="inputDiv"> </div>
-		<script src="./table.js"></script>
+		<div>
+			<table>
+				<tbody id="tbody" class="tableBody">
+				</tbody>
+			</table>
+		</div>
+		<script>
+			//Rendert die Tabelle
+			var tableBody = document.getElementById('tbody');
+			var rows = 20; //Anzahl der Zeilen die gerendert werden
+			for (var i = 0; i < rows; i++) {
+				var tr = document.createElement('tr');
+				tr.className = 'tr';
+				tr.id = i;
+				tableBody.appendChild(tr);
+
+				//Column Speicherzelle
+				var td = document.createElement('td');
+				td.appendChild(document.createTextNode(i));
+				td.className = 'speicherzelle';
+				tr.appendChild(td);
+
+				//Column Inhalt
+				var td = document.createElement('td');
+				var input = document.createElement("input")
+					input.setAttribute("type", "number");
+					input.setAttribute("min", "0");
+					input.setAttribute("defaultValue", "0");
+					input.setAttribute("placeholder", "0");
+					input.id = 'input' + i;
+					input.className = 'userInput';
+				td.appendChild(input);
+				td.className = 'inhalt';
+				tr.appendChild(td);
+
+				//Column Bedeutung
+				var td = document.createElement('td');
+				td.appendChild(document.createTextNode("0"));
+				td.id = "bedeutung" + i;
+				td.className = 'bedeutung';
+				tr.appendChild(td);
+			}
+		</script>
+		<script src="./update.js" charset="utf-8"></script>
 	</body>
 </html>

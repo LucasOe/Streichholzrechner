@@ -28,3 +28,10 @@
 	false
 -Programm ausführbar machen indem der Pointer die Tabelle durchläuft
 -Inhalt als Json exportieren und importieren
+
+Json:
+{
+	"array": [ 3, 5, 4, 6, 5, 4, 20, 7, 4, 0, 2 ]
+}
+
+Json wird geladen und die Array ob es sich um einen Wert oder Befehl handelt wird erstellt
