@@ -7,7 +7,7 @@ app.on('ready', function createWindow () {
 		height: 750,
 		title: app.getName(),
 		titleBarStyle: 'hidden',
-		backgroundColor: '#23272A',
+		backgroundColor: '#21252b',
 		resizable: false
 	});
 	mainWindow.setMenuBarVisibility(false);
