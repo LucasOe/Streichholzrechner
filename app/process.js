@@ -4,11 +4,11 @@
 
 var inputArray = []; //Array mit den input als Befehle
 var isVarArray = []; //Array ob es sich um eine Variable oder einen Befehl handelt
-var pointer = 0; //Pointer der auf den aktuellen Befehl zeigt
+var pointer = 1; //Pointer der auf den aktuellen Befehl zeigt. 0 makiert das Ende
 
 //Füllt die Array mit leeren Werten
 for(var i=0; i < rows; i++) {
-	inputArray[i] = 0;
+	inputArray[i] = "";
 	isVarArray[i] = false;
 }
 
@@ -31,4 +31,9 @@ function updateIsVar() {
 				break;
 		}
 	});
+}
+
+function printArray() {
+	console.log(inputArray);
+	console.log(isVarArray);
 }

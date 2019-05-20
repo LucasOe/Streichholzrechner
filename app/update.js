@@ -6,6 +6,8 @@
 var allInputs = document.querySelectorAll('input');
 
 allInputs.forEach(function(button, buttonIndex) {
+	buttonIndex++;
+
   button.addEventListener('click', 	handler);
 	button.addEventListener('change', handler);
 
@@ -27,6 +29,8 @@ function updateClass() {
 	var allTr = document.querySelectorAll('tr');
 
 	allTr.forEach(function(tr, trIndex) {
+		trIndex++;
+
 		var tr = document.getElementById("tr" + trIndex);
 		if(isVarArray[trIndex]) {
 			tr.classList.add("var");

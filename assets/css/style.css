@@ -10,20 +10,18 @@
 	font-weight: bold;
 }
 
-.speicherzelle {
-	width: 130px;
-}
-
-.inhalt {
-	width: 130px;
-}
-
-.bedeutung {
-	width: 130px;
+.speicherzelle, .inhalt, .bedeutung {
+	width: 120px;
 }
 
 table {
 	width: 100%;
+}
+
+table td {
+  width: 120px;
+  overflow: hidden;
+  display: inline-block;
 }
 
 .tr:hover {
