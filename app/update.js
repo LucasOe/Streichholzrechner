@@ -8,7 +8,7 @@ var allInputs = document.querySelectorAll('input');
 allInputs.forEach(function(button, buttonIndex) {
 	buttonIndex++;
 
-  button.addEventListener('click', 	handler);
+	button.addEventListener('click', 	handler);
 	button.addEventListener('change', handler);
 
 	function handler(event) {
@@ -21,7 +21,7 @@ allInputs.forEach(function(button, buttonIndex) {
 
 		updateClass();
 		updateBedeutung(buttonIndex);
-  }
+	}
 });
 
 function updateClass() {
