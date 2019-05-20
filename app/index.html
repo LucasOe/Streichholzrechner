@@ -1,7 +1,7 @@
 <html lang="de">
 	<head>
-		<link rel="stylesheet" href="../assets/css/style.css">
-		<link rel="stylesheet" href="../assets/css/scrollbar.css">
+		<link rel="stylesheet" href="./assets/css/style.css">
+		<link rel="stylesheet" href="./assets/css/scrollbar.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	</head>
 	<body>
@@ -23,9 +23,11 @@
 				</tbody>
 			</table>
 		</div>
-		<script>
+		<script> //Render Table
+			var path = require('path');
+
 			var tableBody = document.getElementById('tbody');
-			var rows = 20; //Anzahl der Zeilen die gerendert werden
+			var rows = 50; //Anzahl der Zeilen die gerendert werden
 			for (var i = 1; i <= rows; i++) {
 				var tr = document.createElement('tr');
 				tr.className = 'tr';

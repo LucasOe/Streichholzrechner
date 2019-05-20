@@ -8,7 +8,11 @@ app.on('ready', function createWindow () {
 		title: app.getName(),
 		titleBarStyle: 'hidden',
 		backgroundColor: '#21252b',
-		resizable: false
+		resizable: false,
+		webPreferences: {
+			nodeIntegration: true,
+			devTools: true
+		}
 	});
 	mainWindow.setMenuBarVisibility(false);
 	mainWindow.loadFile('./app/index.html');
