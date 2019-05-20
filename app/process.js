@@ -37,3 +37,7 @@ function printArray() {
 	console.log(inputArray);
 	console.log(isVarArray);
 }
+
+function setPointer(pointingAt) {
+	pointer = pointingAt;
+}

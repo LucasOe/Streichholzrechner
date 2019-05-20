@@ -25,7 +25,7 @@ allInputs.forEach(function(button, buttonIndex) {
 });
 
 function updateClass() {
-	//Durchläuft alle tr & setzt die Klasse zu var wenn es sich um eine Variable handelt
+	//Setzt tr zu var wenn es sich um eine Variable handelt
 	var allTr = document.querySelectorAll('tr');
 
 	allTr.forEach(function(tr, trIndex) {
@@ -91,4 +91,20 @@ function updateBedeutung(index) {
 				bedeutung.removeAttribute("title");
 		}
 	}
+}
+
+function updateActive() {
+	//Setzt tr zu active wenn der pointer gerade auf sie zeigt
+	var allTr = document.querySelectorAll('tr');
+
+	allTr.forEach(function(tr, trIndex) {
+		trIndex++;
+
+		var tr = document.getElementById("tr" + trIndex);
+		if(pointer === trIndex) {
+			tr.classList.add("active");
+		} else {
+			if(tr) tr.classList.remove("active");
+		}
+	});
 }

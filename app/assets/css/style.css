@@ -51,3 +51,7 @@ table td {
 .var {
 	background-color: var(--grey);
 }
+
+.active {
+	color: var(--blue);
+}
