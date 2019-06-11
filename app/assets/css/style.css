@@ -77,6 +77,10 @@ table td {
 	width: 30px;
 }
 
+.buttons button:focus {
+	outline: none;
+}
+
 .buttons img {
 	height: 100%;
 }
