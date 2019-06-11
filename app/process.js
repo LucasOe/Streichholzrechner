@@ -38,6 +38,12 @@ function printArray() {
 	console.log(isVarArray);
 }
 
+//Setzt den Pointer zu einem bestimmten Wert
 function setPointer(pointingAt) {
 	pointer = pointingAt;
+}
+
+//Erhöht den Pointer um 1
+function nextPointer() {
+	pointer++;
 }
