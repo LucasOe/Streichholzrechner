@@ -108,3 +108,9 @@ function updateActive() {
 		}
 	});
 }
+
+function updateDisplayVars() {
+	//Updated die X&Y-Variablen die angezeigt werden
+	document.getElementById("varX").innerHTML = varX;
+	document.getElementById("varY").innerHTML = varY;
+}

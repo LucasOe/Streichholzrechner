@@ -54,6 +54,7 @@ table td {
 
 .active {
 	color: var(--blue);
+	background-color: var(--lightgrey);
 }
 
 .control {

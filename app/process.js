@@ -5,6 +5,8 @@
 var inputArray = []; //Array mit den input als Befehle
 var isVarArray = []; //Array ob es sich um eine Variable oder einen Befehl handelt
 var pointer = 1; //Pointer der auf den aktuellen Befehl zeigt. 0 makiert das Ende
+var varX = 0;
+var varY = 0;
 
 //Füllt die Array mit leeren Werten
 for(var i=0; i < rows; i++) {
@@ -46,4 +48,12 @@ function setPointer(pointingAt) {
 //Erhöht den Pointer um 1
 function nextPointer() {
 	pointer++;
+}
+
+function setVarX(value) {
+	varX = value;
+}
+
+function setVarY(value) {
+	varY = value;
 }
