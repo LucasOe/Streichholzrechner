@@ -70,10 +70,12 @@ function nextPointer() {
 
 function setVarX(value) {
 	varX = parseInt(value);
+	updateDisplayVars();
 }
 
 function setVarY(value) {
 	varY = parseInt(value);
+	updateDisplayVars();
 }
 
 function resetVars() {

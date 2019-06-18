@@ -16,48 +16,44 @@ function jmp() {
 
 //Lade einen Wert in das X-Register.
 function ldX() {
-	var nextCellContent = getCellContent(pointer + 1);
-	setVarX(nextCellContent);
-	pointer += 2;
+	setVarX(getCellContent(pointer + 1));
 
-	updateDisplayVars();
+	pointer += 2;
 	updateActive();
 }
 
 //Lade einen Wert in das Y-Register.
 function ldY() {
-	var nextCellContent = getCellContent(pointer + 1);
-	setVarY(nextCellContent);
-	pointer += 2;
+	setVarY(getCellContent(pointer + 1));
 
-	updateDisplayVars();
+	pointer += 2;
 	updateActive();
 }
 
 //Addition: X-Register := X-Register + Y-Register
 function add() {
 	setVarX(varX + varY);
-	pointer++;
 
-	updateDisplayVars();
-	updateActive();
+	nextPointer();
 }
 
 //Subtraktion: X-Register := X-Register – Y-Register
 function sub() {
 	setVarX(varX - varY);
-	pointer++;
 
-	updateDisplayVars();
-	updateActive();
+	nextPointer();
 }
 
 //Store X: Der Wert vom X-Register wird in die Speicherzelle geschrieben, deren Nummer im Y-Register steht.
 function strX() {
-	console.log("7");
+	setCellContent(varY, varX);
+
+	nextPointer();
 }
 
 //Load from: Lädt den Inhalt der Speicherzelle in das X-Register, deren Nummer im Y-Register steht.
 function Ldf() {
-	console.log("8");
+	setVarX(getCellContent(varY));
+
+	nextPointer();
 }
