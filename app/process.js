@@ -45,18 +45,35 @@ function getCellContent(index) {
 	return document.getElementById(index).value;
 }
 
+function setCellContent(index, content) {
+	//User input vom aktuellen button
+	document.getElementById(index).value = content.toString();
+
+	//Fügt user input zum inputArray hinzu & updated isVar array
+	inputArray[index] = content.toString();
+	updateIsVar();
+
+	updateClass();
+	updateBedeutung(buttonIndex);
+}
+
 //Setzt den Pointer zu einem bestimmten Wert
 function setPointer(pointingAt) {
 	pointer = pointingAt;
 	updateActive();
 }
 
+function nextPointer() {
+	pointer++;
+	updateActive();
+}
+
 function setVarX(value) {
-	varX = value;
+	varX = parseInt(value);
 }
 
 function setVarY(value) {
-	varY = value;
+	varY = parseInt(value);
 }
 
 function resetVars() {
@@ -96,8 +113,7 @@ function runCommand() {
 			break;
 		default:
 			console.log("Kein Befehl in der Speicherzelle");
-			pointer++;
-			updateActive();
+			nextPointer();
 			break;
 	}
 }

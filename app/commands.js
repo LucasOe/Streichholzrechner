@@ -7,15 +7,11 @@ function jmpg() {
 	if(varX > 0) {
 		setPointer(varY);
 	}
-
-	updateActive();
 }
 
 //Unbedingter Sprung: Sprung zu der Adresse, die im Y-Register steht.
 function jmp() {
 	setPointer(varY);
-
-	console.log("Set Pointer to: " + varY);
 }
 
 //Lade einen Wert in das X-Register.
