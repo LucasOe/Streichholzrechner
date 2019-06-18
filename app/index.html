@@ -7,22 +7,10 @@
 	<body>
 		<div class="control">
 			<div class="buttons">
+				<script src="./buttonEvents.js"></script>
 				<button onclick="eventReset()"> <img src="./assets/button/button_reset.png"> </button>
 				<button onclick="eventSkip()"> <img src="./assets/button/button_skip.png"> </button>
 				<button onclick="eventForward()"> <img src="./assets/button/button_forward.png"> </button>
-				<script>
-					function eventReset() {
-						console.log("DEBUG: Pointer wurde auf 1 zurückgesetzt")
-					}
-
-					function eventSkip() {
-						console.log("DEBUG: Programm wird komplett ausgeführt")
-					}
-
-					function eventForward() {
-						console.log("DEBUG: Pointer wird um 1 erhöht.")
-					}
-				</script>
 			</div>
 			<div class="vars">
 				<div class="outputVar"> <span> Var. X: </span> <span id="varX"> 0 </span> </div>
@@ -87,6 +75,7 @@
 			}
 		</script>
 		<script src="./process.js"></script>
+		<script src="./commands.js"></script>
 		<script src="./update.js" charset="utf-8"></script>
 	</body>
 </html>
