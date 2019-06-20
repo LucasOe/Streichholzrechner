@@ -6,21 +6,23 @@
 var allInputs = document.querySelectorAll('input');
 
 allInputs.forEach(function(button, buttonIndex) {
-	buttonIndex++;
+	if(buttonIndex < rows) {
+		buttonIndex++;
 
-	button.addEventListener('click', 	handler);
-	button.addEventListener('change', handler);
+		button.addEventListener('click', 	handler);
+		button.addEventListener('change', handler);
 
-	function handler(event) {
-		//User input vom aktuellen button
-		var input = document.getElementById(buttonIndex).value;
+		function handler(event) {
+			//User input vom aktuellen button
+			var input = document.getElementById(buttonIndex).value;
 
-		//Fügt user input zum inputArray hinzu & updated isVar array
-		inputArray[button.id] = input;
-		updateIsVar();
+			//Fügt user input zum inputArray hinzu & updated isVar array
+			inputArray[button.id] = input;
+			updateIsVar();
 
-		updateClass();
-		updateBedeutung(buttonIndex);
+			updateClass();
+			updateBedeutung(buttonIndex);
+		}
 	}
 });
 
@@ -29,15 +31,17 @@ function updateClass() {
 	var allTr = document.querySelectorAll('tr');
 
 	allTr.forEach(function(tr, trIndex) {
-		trIndex++;
+		if(trIndex < rows) {
+			trIndex++;
 
-		var tr = document.getElementById("tr" + trIndex);
-		if(isVarArray[trIndex]) {
-			tr.classList.add("var");
-		} else {
-			if(tr) tr.classList.remove("var");
+			var tr = document.getElementById("tr" + trIndex);
+			if(isVarArray[trIndex]) {
+				tr.classList.add("var");
+			} else {
+				if(tr) tr.classList.remove("var");
+			}
+			updateBedeutung(trIndex);
 		}
-		updateBedeutung(trIndex);
 	});
 }
 
@@ -98,13 +102,15 @@ function updateActive() {
 	var allTr = document.querySelectorAll('tr');
 
 	allTr.forEach(function(tr, trIndex) {
-		trIndex++;
+		if(trIndex < rows) {
+			trIndex++;
 
-		var tr = document.getElementById("tr" + trIndex);
-		if(pointer === trIndex) {
-			tr.classList.add("active");
-		} else {
-			if(tr) tr.classList.remove("active");
+			var tr = document.getElementById("tr" + trIndex);
+			if(pointer === trIndex) {
+				tr.classList.add("active");
+			} else {
+				if(tr) tr.classList.remove("active");
+			}
 		}
 	});
 }

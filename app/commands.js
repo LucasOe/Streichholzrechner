@@ -49,6 +49,7 @@ function strX() {
 	setCellContent(varY, varX);
 
 	nextPointer();
+	console.log("A");
 }
 
 //Load from: Lädt den Inhalt der Speicherzelle in das X-Register, deren Nummer im Y-Register steht.

@@ -11,6 +11,10 @@ function eventReset() {
 //Fuehrt alle Speicherzellen aus
 function eventSkip() {
 	console.log("DEBUG: Fuehrt alle Speicherzellen aus");
+
+	for(var i=0; i<=inputArray.length; i++) {
+		runCommand();
+	}
 }
 
 //Fuehrt die Speicherzelle aus auf die der Pointer gerade zeigt

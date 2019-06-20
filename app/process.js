@@ -118,4 +118,11 @@ function runCommand() {
 			nextPointer();
 			break;
 	}
+
+	checkExitCondition();
+}
+
+//Überprüft ob der Pointer eine Endbedingung erreicht hat
+function checkExitCondition() {
+
 }
