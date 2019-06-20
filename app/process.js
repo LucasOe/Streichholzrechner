@@ -86,7 +86,6 @@ function resetVars() {
 //Führt den Befehl aus auf den der Pointer zeigt
 function runCommand() {
 	var cellContent = getCellContent(pointer);
-	console.log(cellContent);
 
 	switch(cellContent) {
 		case "1": //jmpg
@@ -114,7 +113,6 @@ function runCommand() {
 			ldf();
 			break;
 		default:
-			console.log("Kein Befehl in der Speicherzelle");
 			nextPointer();
 			break;
 	}
