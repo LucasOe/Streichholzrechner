@@ -54,7 +54,7 @@ function setCellContent(index, content) {
 	updateIsVar();
 
 	updateClass();
-	updateBedeutung(buttonIndex);
+	updateBedeutung(index);
 }
 
 //Setzt den Pointer zu einem bestimmten Wert
