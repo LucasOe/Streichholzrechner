@@ -74,7 +74,11 @@ function setVarX(value) {
 }
 
 function setVarY(value) {
-	varY = parseInt(value);
+	if(value < 0) {
+		varY = 0;
+	} else {
+		varY = parseInt(value);
+	}
 	updateDisplayVars();
 }
 
