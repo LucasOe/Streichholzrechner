@@ -1,9 +1,9 @@
 //Setzt den Pointer zu der ersten Speicherzelle
 function eventReset() {
 	setPointer(1);
-	resetVars();
+	resetReg();
 	updateActive();
-	updateDisplayVars();
+	updateDisplayReg();
 }
 
 //Fuehrt alle Speicherzellen aus

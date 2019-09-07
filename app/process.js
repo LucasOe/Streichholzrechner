@@ -82,7 +82,7 @@ function setRegY(value) {
 	updateDisplayReg();
 }
 
-function resetVars() {
+function resetReg() {
 	regX = 0;
 	regY = 0;
 }
