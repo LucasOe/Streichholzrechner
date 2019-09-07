@@ -15,18 +15,23 @@ body {
 	position: relative;
 }
 
+table {
+	width: 100%;
+}
+
 .controlpanel {
+	width: 412px;
 	position: fixed;
 	background-color: var(--darkgrey);
 	z-index: 1;
 }
 
 .tableBody {
+	width: 100%;
 	color: white;
 	display: table;
 	border-collapse: collapse;
 	font-family: 'Open Sans', sans-serif;
-	width: 100%;
 }
 
 .tableHeader {
@@ -34,12 +39,11 @@ body {
 }
 
 .speicherzelle, .inhalt, .bedeutung {
-	width: 120px;
+	width: 33%;
 }
 
 table td {
   overflow: hidden;
-  display: inline-block;
 }
 
 .tr:hover {
