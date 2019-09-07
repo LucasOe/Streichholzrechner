@@ -20,14 +20,14 @@ table {
 }
 
 .controlpanel {
-	width: 412px;
+	width: 402px;
 	position: fixed;
 	background-color: var(--darkgrey);
 	z-index: 1;
 }
 
 .tableBody {
-	width: 100%;
+	width: 402px;
 	color: white;
 	display: table;
 	border-collapse: collapse;
