@@ -4,6 +4,7 @@ function eventReset() {
 	resetReg();
 	updateActive();
 	updateDisplayReg();
+	scrollWindow(1);
 }
 
 //Fuehrt alle Speicherzellen aus

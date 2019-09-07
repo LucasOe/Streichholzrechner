@@ -95,27 +95,35 @@ function runCommand() {
 		switch(cellContent) {
 			case "1": //jmpg
 				jmpg();
+				scrollWindow(pointer);
 				break;
 			case "2": //jmp
 				jmp();
+				scrollWindow(pointer);
 				break;
 			case "3": //ldX
 				ldX();
+				scrollWindow(pointer);
 				break;
 			case "4": //ldY
 				ldY();
+				scrollWindow(pointer);
 				break;
 			case "5": //add
 				add();
+				scrollWindow(pointer);
 				break;
 			case "6": //sub
 				sub();
+				scrollWindow(pointer);
 				break;
 			case "7": //strX
 				strX();
+				scrollWindow(pointer);
 				break;
 			case "8": //ldf
 				ldf();
+				scrollWindow(pointer);
 				break;
 			default:
 				nextPointer();
@@ -128,4 +136,8 @@ function checkExitCondition() {
 	if(pointer == 0 || pointer > 256) {
 		eventReset();
 	}
+}
+
+function scrollWindow(y) {
+	window.scroll(0, 26 * (y - 1));
 }
