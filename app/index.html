@@ -53,7 +53,7 @@
 
 				//Column Speicherzelle
 				var td = document.createElement('td');
-				td.appendChild(document.createTextNode(i));
+				td.appendChild(document.createTextNode( ('00' + i).slice(-3) ));
 				td.className = 'speicherzelle';
 				tr.appendChild(td);
 
