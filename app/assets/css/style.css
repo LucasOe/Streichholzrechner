@@ -6,6 +6,21 @@
 	--blue: 	#568af2;
 }
 
+body {
+	margin: 0px 8px;
+}
+
+.table {
+	top: 119px;
+	position: relative;
+	z-index: -1;
+}
+
+.controlpanel {
+	position: fixed;
+	background-color: var(--darkgrey);
+}
+
 .tableBody {
 	color: white;
 	display: table;

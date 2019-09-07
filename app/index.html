@@ -5,37 +5,41 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	</head>
 	<body>
-		<div class="control">
-			<div class="buttons">
-				<script src="./buttonEvents.js"></script>
-				<button onclick="eventReset()"> <img src="./assets/button/button_reset.png"> </button>
-				<button onclick="eventSkip()"> <img src="./assets/button/button_skip.png"> </button>
-				<button onclick="eventForward()"> <img src="./assets/button/button_forward.png"> </button>
+		<div class="controlpanel">
+			<div class="control">
+				<div class="buttons">
+					<script src="./buttonEvents.js"></script>
+					<button onclick="eventReset()"> <img src="./assets/button/button_reset.png"> </button>
+					<button onclick="eventSkip()"> <img src="./assets/button/button_skip.png"> </button>
+					<button onclick="eventForward()"> <img src="./assets/button/button_forward.png"> </button>
+				</div>
+				<div class="reg">
+					<div class="outputReg"> <span> Register X: </span> <span id="regX"> 0 </span> </div>
+					<div class="outputReg"> <span> Register Y: </span> <span id="regY"> 0 </span> </div>
+				</div>
 			</div>
-			<div class="reg">
-				<div class="outputReg"> <span> Register X: </span> <span id="regX"> 0 </span> </div>
-				<div class="outputReg"> <span> Register Y: </span> <span id="regY"> 0 </span> </div>
+			<div class="label">
+				<table>
+					<tbody class="tableBody tableHeader">
+						<tr>
+							<td class="speicherzelle">Speicherzelle</td>
+							<td class="inhalt">Inhalt</td>
+							<td class="bedeutung">Bedeutung</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
-		</div>
-		<div class="label">
-			<table>
-				<tbody class="tableBody tableHeader">
-					<tr>
-						<td class="speicherzelle">Speicherzelle</td>
-						<td class="inhalt">Inhalt</td>
-						<td class="bedeutung">Bedeutung</td>
-					</tr>
-				</tbody>
-			</table>
 		</div>
 
-		<div>
+		<div class="table">
 			<table>
 				<tbody id="tbody" class="tableBody">
 				</tbody>
 			</table>
 		</div>
-		<script> //Render Table
+
+		<script> 
+			//Render Table
 			var path = require('path');
 
 			var tableBody = document.getElementById('tbody');
