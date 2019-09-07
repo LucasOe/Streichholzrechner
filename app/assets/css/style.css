@@ -1,9 +1,9 @@
 :root {
 	--darkgrey:	#21252b;
-	--grey:			#252930;
+	--grey:		#252930;
 	--lightgrey:#282c34;
-	--green: 		#73c990;
-	--blue: 		#568af2;
+	--green: 	#73c990;
+	--blue: 	#568af2;
 }
 
 .tableBody {
@@ -43,17 +43,20 @@ table td {
 	cursor: default;
 }
 
-.reg {
-	background-color: var(--grey);
-}
-
 .active {
 	color: var(--blue);
 	background-color: var(--lightgrey);
 }
 
 .control {
-	height: 60px;
+	padding: 7px 0px;
+	border-bottom: solid 1px white;
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	height: 30px;
 }
 
 .buttons button {
@@ -73,19 +76,27 @@ table td {
 	height: 100%;
 }
 
+.reg {
+	height: 30px;
+	display: flex;
+	align-items: center;
+}
+
 .outputReg {
 	font-family: 'Open Sans', sans-serif;
 	color: white;
 	width: 50%;
-	height: 100%;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	float: left;
+	text-align: center;
 }
 
-.outputReg span {
-	display: inline-block;
-	vertical-align: middle;
-	line-height: 30px;
+.label {
+	padding: 7px 0px;
+}
+
+.label table {
+	height: 30px;
 }
