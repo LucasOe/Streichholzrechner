@@ -61,11 +61,13 @@ function setCellContent(index, content) {
 function setPointer(pointingAt) {
 	pointer = pointingAt;
 	updateActive();
+	checkExitCondition();
 }
 
 function nextPointer() {
 	pointer++;
 	updateActive();
+	checkExitCondition()
 }
 
 function setRegX(value) {
@@ -132,9 +134,14 @@ function runCommand() {
 	}
 }
 
+//Beendet das Programm wenn der Pointer 257 oder 0 erreicht
 function checkExitCondition() {
-	if(pointer == 0 || pointer > 256) {
-		eventReset();
+	if (pointer > 256 || pointer == 0) {
+		alert("Der Pointer hat das Ende des Programms ereicht.\nX-Register: " + regX + "\nY-Register: " + regY);
+		resetReg();
+		updateActive();
+		updateDisplayReg();
+		scrollWindow(1);
 	}
 }
 

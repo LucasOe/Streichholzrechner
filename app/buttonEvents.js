@@ -12,6 +12,7 @@ function eventSkip() {
 	for(var i=0; i<=inputArray.length; i++) {
 		runCommand();
 	}
+	setPointer(1);
 }
 
 //Fuehrt die Speicherzelle aus auf die der Pointer gerade zeigt
