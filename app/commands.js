@@ -4,19 +4,19 @@
 
 //Bedingter Sprung: Sprung zur Adresse, die im Y-Register steht, wenn der Inhalt des X-Registers größer 0 ist.
 function jmpg() {
-	if(varX > 0) {
-		setPointer(varY);
+	if(regX > 0) {
+		setPointer(regY);
 	}
 }
 
 //Unbedingter Sprung: Sprung zu der Adresse, die im Y-Register steht.
 function jmp() {
-	setPointer(varY);
+	setPointer(regY);
 }
 
 //Lade einen Wert in das X-Register.
 function ldX() {
-	setVarX(getCellContent(pointer + 1));
+	setRegX(getCellContent(pointer + 1));
 
 	pointer += 2;
 	updateActive();
@@ -24,7 +24,7 @@ function ldX() {
 
 //Lade einen Wert in das Y-Register.
 function ldY() {
-	setVarY(getCellContent(pointer + 1));
+	setRegY(getCellContent(pointer + 1));
 
 	pointer += 2;
 	updateActive();
@@ -32,28 +32,28 @@ function ldY() {
 
 //Addition: X-Register := X-Register + Y-Register
 function add() {
-	setVarX(varX + varY);
+	setRegX(regX + regY);
 
 	nextPointer();
 }
 
 //Subtraktion: X-Register := X-Register – Y-Register
 function sub() {
-	setVarX(varX - varY);
+	setRegX(regX - regY);
 
 	nextPointer();
 }
 
 //Store X: Der Wert vom X-Register wird in die Speicherzelle geschrieben, deren Nummer im Y-Register steht.
 function strX() {
-	setCellContent(varY, varX);
+	setCellContent(regY, regX);
 
 	nextPointer();
 }
 
 //Load from: Lädt den Inhalt der Speicherzelle in das X-Register, deren Nummer im Y-Register steht.
 function Ldf() {
-	setVarX(getCellContent(varY));
+	setRegX(getCellContent(regY));
 
 	nextPointer();
 }

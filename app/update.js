@@ -115,8 +115,8 @@ function updateActive() {
 	});
 }
 
-function updateDisplayVars() {
+function updateDisplayReg() {
 	//Updated die X&Y-Variablen die angezeigt werden
-	document.getElementById("varX").innerHTML = varX;
-	document.getElementById("varY").innerHTML = varY;
+	document.getElementById("regX").innerHTML = regX;
+	document.getElementById("regY").innerHTML = regY;
 }

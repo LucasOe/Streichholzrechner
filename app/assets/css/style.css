@@ -22,12 +22,7 @@
 	width: 120px;
 }
 
-table {
-	width: 100%;
-}
-
 table td {
-  width: 120px;
   overflow: hidden;
   display: inline-block;
 }
@@ -48,7 +43,7 @@ table td {
 	cursor: default;
 }
 
-.var {
+.reg {
 	background-color: var(--grey);
 }
 
@@ -58,14 +53,7 @@ table td {
 }
 
 .control {
-	width: 100%;
-	height: 30px;
-	margin: 10px 0px;
-}
-
-.buttons {
-	width: 40%;
-	float: left;
+	height: 60px;
 }
 
 .buttons button {
@@ -85,23 +73,18 @@ table td {
 	height: 100%;
 }
 
-.vars {
-	width: 60%;
-	float: left;
-}
-
-.outputVar {
+.outputReg {
 	font-family: 'Open Sans', sans-serif;
 	color: white;
 	width: 50%;
 	height: 100%;
-	float: left;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	float: left;
 }
 
-.outputVar span {
+.outputReg span {
 	display: inline-block;
 	vertical-align: middle;
 	line-height: 30px;

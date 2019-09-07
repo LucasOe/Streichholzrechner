@@ -5,8 +5,8 @@
 var inputArray = []; //Array mit den input als Befehle
 var isVarArray = []; //Array ob es sich um eine Variable oder einen Befehl handelt
 var pointer = 1; //Pointer der auf den aktuellen Befehl zeigt. 0 makiert das Ende
-var varX = 0;
-var varY = 0;
+var regX = 0;
+var regY = 0;
 
 //Füllt die Array mit leeren Werten
 for(var i=0; i < rows; i++) {
@@ -68,23 +68,23 @@ function nextPointer() {
 	updateActive();
 }
 
-function setVarX(value) {
-	varX = parseInt(value);
-	updateDisplayVars();
+function setRegX(value) {
+	regX = parseInt(value);
+	updateDisplayReg();
 }
 
-function setVarY(value) {
+function setRegY(value) {
 	if(value < 0) {
-		varY = 0;
+		regY = 0;
 	} else {
-		varY = parseInt(value);
+		regY = parseInt(value);
 	}
-	updateDisplayVars();
+	updateDisplayReg();
 }
 
 function resetVars() {
-	varX = 0;
-	varY = 0;
+	regX = 0;
+	regY = 0;
 }
 
 //Führt den Befehl aus auf den der Pointer zeigt
