@@ -11,7 +11,7 @@ body {
 } 
 
 .table {
-	top: 119px;
+	top: 130px;
 	position: relative;
 }
 
@@ -71,7 +71,8 @@ table td {
 .buttons {
 	display: flex;
 	justify-content: center;
-	height: 30px;
+	height: 35px;
+	align-items: center;
 }
 
 .buttons button {
@@ -79,8 +80,8 @@ table td {
 	margin: 0px;
 	padding: 0px;
 	background-color: transparent;
-	height: 30px;
-	width: 30px;
+	height: 24px;
+	width: 50px;
 }
 
 .buttons button:focus {
@@ -92,7 +93,7 @@ table td {
 }
 
 .reg {
-	height: 30px;
+	height: 35px;
 	display: flex;
 	align-items: center;
 }
