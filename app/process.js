@@ -136,7 +136,13 @@ function runCommand() {
 
 //Beendet das Programm wenn der Pointer 257 oder 0 erreicht
 function checkExitCondition() {
-	if (pointer > 256 || pointer == 0) {
+	if (pointer > 256) {
+		alert("Fehler: Der Pointer hat die Speicherzelle 256 überschritten.\nX-Register: " + regX + "\nY-Register: " + regY);
+		resetReg();
+		updateActive();
+		updateDisplayReg();
+		scrollWindow(1);
+	} else if (pointer == 0) {
 		alert("Der Pointer hat das Ende des Programms ereicht.\nX-Register: " + regX + "\nY-Register: " + regY);
 		resetReg();
 		updateActive();
