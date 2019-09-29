@@ -7,6 +7,21 @@
 	</head>
 	<body>
 		<div class="controlpanel">
+			<div class="help">
+				<button> <img src="./assets/button/button_help.png"> </button>
+				<div class="help_popup">
+					<table>
+						<tr> <td>1</td> <td>Jmpg	</td> <td>Bedingter Sprung: Sprung zu der Adresse, die im Y-Register steht, wenn der Inhalt des X-Registers größer 0 ist.D.h. der Groschen wird auf die Speicherzelle geschoben, dessen Nummer im Y-Register steht. </td> </tr>
+						<tr> <td>2</td> <td>Jmp		</td> <td>Unbedingter Sprung: Sprung zu der Adresse, die im Y-Register steht.D.h. der Groschen wird auf die Speicherzelle geschoben, dessen Nummer im Y-Register steht. </td> </tr>
+						<tr> <td>3</td> <td>Ld x	</td> <td>Lade einen Wert in das X-Register: Der Wert steht in der folgenden Speicherzelle. Der Groschen wird dann auf die übernächste Speicherzelle verschoben! </td> </tr>
+						<tr> <td>4</td> <td>Ld y	</td> <td>Lade einen Wert in das Y-Register: Der Wert steht in der folgenden Speicherzelle. Der Groschen wird dann auf die übernächste Speicherzelle verschoben! </td> </tr>
+						<tr> <td>5</td> <td>Add		</td> <td>Addition: X-Register := X-Register + Y-Register </td> </tr>
+						<tr> <td>6</td> <td>Sub		</td> <td>Subtraktion: X-Register := X-Register – Y-RegisterIst das Ergebnis negativ, wird nur ein Streichholz quer gelegt. Der eigentliche Wert ist nicht zu speichern! Es ist nur für jmpg interessant, ob hier ein negativer Wert vorliegt. </td> </tr>
+						<tr> <td>7</td> <td>Str X	</td> <td>Store X: Der Wert vom X-Register wird in die Speicherzelle geschrieben, deren Nummer im Y-Register steht. </td> </tr>
+						<tr> <td>8</td> <td>Ld f	</td> <td>Load from: Lädt den Inhalt der Speicherzelle in das X-Register, deren Nummer im Y-Register steht. </td> </tr>
+					</table>
+				</div>
+			</div>
 			<div class="control">
 				<div class="buttons">
 					<script src="./buttonEvents.js"></script>

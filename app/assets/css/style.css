@@ -2,13 +2,25 @@
 	--darkgrey:	#21252b;
 	--grey:		#252930;
 	--lightgrey:#282c34;
-	--green: 	#73c990;
 	--blue: 	#568af2;
 }
 
 body {
 	margin: 0px 8px;
 } 
+
+img {
+	height: 100%;
+}
+
+button {
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: transparent;
+	cursor: pointer;
+	outline:none;
+}
 
 .table {
 	top: 130px;
@@ -20,7 +32,7 @@ table {
 }
 
 .controlpanel {
-	width: 402px;
+	width: 404px;
 	position: fixed;
 	background-color: var(--darkgrey);
 	z-index: 1;
@@ -43,7 +55,7 @@ table {
 }
 
 table td {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .tr:hover {
@@ -80,20 +92,8 @@ table td {
 }
 
 .buttons button {
-	border: none;
-	margin: 0px;
-	padding: 0px;
-	background-color: transparent;
 	height: 24px;
 	width: 50px;
-}
-
-.buttons button:focus {
-	outline: none;
-}
-
-.buttons img {
-	height: 100%;
 }
 
 .reg {
@@ -119,4 +119,52 @@ table td {
 
 .label table {
 	height: 30px;
+}
+
+.help {
+	position: fixed;
+	margin-top: 8px; 
+}
+
+.help button {
+	height: 20px;
+	z-index: 3;
+}
+
+.help:hover > .help_popup {
+	opacity: 1;
+	visibility: visible;
+}
+
+.help_popup {
+	z-index: 2;
+	visibility: hidden;
+	width: 404px;
+	background-color: var(--grey);
+	position: absolute;
+	top: 0px;
+
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.help_popup table {
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	display: table;
+	border-collapse: collapse;
+	vertical-align: top;
+}
+
+.help_popup tr:not(:last-child) {
+	border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.help_popup tr {
+	margin: 10px;
+}
+
+.help_popup td {
+	padding: 8px;
 }
