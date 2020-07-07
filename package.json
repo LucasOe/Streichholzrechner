@@ -5,7 +5,8 @@
   "main": "./app/main.js",
   "dependencies": {
     "electron": "^7.2.4",
-    "electron-packager": "^13.1.1"
+    "electron-packager": "^13.1.1",
+    "minimist": ">=1.2.3" 
   },
   "devDependencies": {},
   "scripts": {
